@@ -62,11 +62,28 @@ keep them organized.
 
 > Answer here
 
+	project = { // compiles a list of tasks to complete when they are all relative.
+		toDo = {
+		task: user inputs the name of the task at hand,
+		date: pick a day for the task to be complete,
+		time: pick a time to schedule your task
+		}
+	}
+	
+
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
 > Answer here
+
+	photoAlbum = {
+		album: user inputes a name for the album {
+			photoSelect: user selects a photo to upload,
+			photoName: user inputs a name for the selected photo,
+			description: user inputs a description of the photo
+		}
+	}
 
 ### 3. Home Automation Manager
 
@@ -76,6 +93,15 @@ information to turn on and off different lights and adjust the thermostat up
 and down.
 
 > Answer here
+	thermostat = {
+		if (temp > 73 || temp < 67)
+			air = on;
+		else {
+			air = off;
+		}
+	}
+
+	// used to adjust the temp to a prefered setting. Makes sure the temp is set to a comfortable range.
 
 ### 4. Sneaker Store
 
@@ -84,6 +110,14 @@ case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
 > Answer here
+
+	shoe = {
+		photo: depict the shoe,
+		brand: list the name barnd of the shoe,
+		price: list a price for the shoe,
+		sizeRange: list of sizes the shoe is made for,
+		sex: tell customer which sex the shoe is intended for(list other as to avoid insulting some people.)
+	}
 
 ## Representing Abstractions in Code
 
@@ -139,7 +173,11 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+> Answer 
+
+	an advantage for this representation would be its simple and easy to read. it clearly details the name of the station and the location you are need to go.
+
+	it fails to demonstrate a time schedule and a list of how many stops each station or line will hit.
 
 ### 6. Doctor Appointment App
 
@@ -244,6 +282,12 @@ the better choice?
 
 > Answer here
 
+	option 2 seems more direct and in this case I believe the better option. It clearly shows the doctor and patient within the appointment.
+	option 1 has a bit more information so it could have its uses as well. its downfall I would say, it doesn't seem as clear who goes with what.
+
+	option 1 may be better if you were listing a number of appointments for the doctor to see and set his schedule.
+	option 2 would be better from a user point of view due to its simplicity.
+
 ## Tying It Together
 
 ### 7. Tic-Tac-Toe
@@ -255,11 +299,45 @@ a.  What are some possible entities that your application might use to model its
 
   > Answer here
 
+  	players = {
+  		player x
+  		player o
+  	}
+
+  	moves = {
+  		icon representing x,
+  		icon representing o,
+  		locations one a 3x3 board with each space represented within an array.
+  	}
+
 b.  How might those entities be represented in JavaScript code?
 
   > Answer here
+
+  	players: [
+  		playerX: input name,
+  		playerO: input name
+  	]
+
+  	game: {
+  		players.playerX {
+  			turn{
+  				playerX: "john",
+  				place: 3,
+  			}
+  		}
+  		players.playery {
+  			turn: {
+  				playerY: "jane",
+  				place: 2,
+  			}
+  		}
+  	}
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
   > Answer here
+
+  	you need a to define who is playing and where there moves would be located on a 3x3 board.
+  	in an array where 0 is the top left corner and 8 is the bottom right corner.
