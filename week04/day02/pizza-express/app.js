@@ -6,15 +6,6 @@ var hbs = require('hbs');
 app.set("view engine", "hbs");
 // app.set('views', './views');
 
-
-// app.get("/test/:someValue", function(req, res, next){
-//   res.render("index.hbs", {
-//     message: req.params.someValue
-//   });
-// });
-
-
-
 app.get('/', function(req,res) {
 	res.render('index.hbs', {
 		message: "Welcome to Pizza Express!"  // doesnt work yet
