@@ -1,0 +1,16 @@
+<h1>Pokemon</h1>
+
+<ul>
+		{{#each pokemon}}
+			<img src={{img}} alt="{{img}}">
+			<li>
+				{{name}}
+			</li>
+			<li>
+				{{id}}
+			</li>
+			<li>
+				type: {{type.[0]}}
+			</li>
+		{{/each}}
+</ul>
