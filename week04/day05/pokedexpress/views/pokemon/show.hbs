@@ -1,6 +1,15 @@
+<img src={{pokemon.img}} alt="{{pokemon.img}}">
+
+<h1>{{pokemon.id}}: {{pokemon.name}}</h1>
+
+<h1>type: {{pokemon.type.[0]}} {{pokemon.type.[1]}}</h1>
+
+<h3>Stats:</h3>
 <ul>
-{{pokemon.[150].name}}
-
+	<li>hp: {{pokemon.stats.hp}}</li>
+	<li>attack: {{pokemon.stats.attack}}</li>
+	<li>defense: {{pokemon.stats.defense}}</li>
+	<li>sp attack: {{pokemon.stats.spattack}}</li>
+	<li>sp defense: {{pokemon.stats.spdefense}}</li>
+	<li>speed: {{pokemon.stats.speed}}</li>
 </ul>
-
-

@@ -18,33 +18,30 @@ router.get('/', function(req, res) {
 	});
 });
 
-router.get('/show', function(req, res) {
-	res.render('pokemon/show.hbs', {
-		pokemon: data
+router.get('/index/:id', function(req, res) {
+	var pokeID = data[req.params.id];
+
+	res.render('pokemon/show', {
+		pokemon: pokeID
 	});
 });
 
-
-// Make a GET route '/index/:index' that will render the Pokemon's show page at that :index
-//
-// Example: a user goes to 'localhost:3000/pokemon/index/0' in the browser and data for Bulbasaur (the pokemon at index 0) will be displayed.
-
-
-
-
-// Make a GET route '/new' that will simply render a form to create a new Pokemon
-
-
-
-
-
-
+router.get('/new', function(req, res) {
+	res.render('pokemon/new');
+});
 
 //***************************
 // CREATE
 //***************************
 //make a POST route '/' to create a New Pokemon
+router.post('/', function(req, res) {
+	var newPokemon = {
+		name: req.body.name
+	};
 
+	data.push(newPokemon);
+	res.redirect('/pokemon');
+});
 
 //***************************
 // UPDATE
