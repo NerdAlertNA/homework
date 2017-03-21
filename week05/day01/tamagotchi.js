@@ -7,7 +7,7 @@ var Tamagotchi = function(name, creatureType) {
 	this.foodInTummy = 10;
 	this.restedness = 10;
 	this.health = 10;
-	
+
 	this.cry = function() {
 		this.health--;
 		console.log('WAHH!!!');
@@ -48,6 +48,7 @@ var Tamagotchi = function(name, creatureType) {
 	};
 };
 
+
 // create new Tamagotchis
 // var ann = new Tamagotchi('Ann', 'mamagatchi');
 // var bob = new Tamagotchi('Bob', 'papagatchi');
@@ -61,3 +62,5 @@ var Tamagotchi = function(name, creatureType) {
 // bob.puke();
 // ann.yawn();
 // bob.yawn();
+
+
