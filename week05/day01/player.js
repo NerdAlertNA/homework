@@ -17,6 +17,6 @@ var player = {
 }; //end player
 
 
-player.feedTamagotchi(ann);
-player.medicateTamagotchi(bob);
-player.knockOutTamagotchi(ann);
+// player.feedTamagotchi(ann);
+// player.medicateTamagotchi(bob);
+// player.knockOutTamagotchi(ann);
