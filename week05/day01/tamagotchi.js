@@ -8,9 +8,19 @@ var Tamagotchi = function(name, creatureType) {
 	this.restedness = 10;
 	this.health = 10;
 	this.cry = function() {
-		this.foodInTummy--;
+		this.health--;
 		console.log('WAHH!!!');
-		console.log(this.name + ' has ' + this.foodInTummy + ' food in tummy.');	
+		console.log(this.name + ' has ' + this.health + ' health.');	
+	};
+	this.puke = function() {
+		this.foodInTummy--;
+		console.log('Blgghh!')
+		console.log(this.name + ' has ' + this.foodInTummy + ' food in tummy.');
+	};
+	this.yawn = function() {
+		this.restedness--;
+		console.log('Mawww, tired.');
+		console.log(this.name + ' has ' + this.restedness + ' restedness');
 	};
 };
 
@@ -23,3 +33,7 @@ console.log(ann);
 console.log(bob);
 ann.cry();
 bob.cry();
+ann.puke();
+bob.puke();
+ann.yawn();
+bob.yawn();
